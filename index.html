@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/d778213d58.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="col1">
+                <h1>Your Score:</h1>
+                <p class="score">1000</p>
+            </div>
+            <div class="col2">
+                
+                <div class="toptextheading">
+                    <p>Difficulty</p>
+                </div>
+                <div class="rating">
+                    <a href="#" class="tooltip-link active-link" id="easy" onclick="setDifficulty('easy')">
+                        Easy
+                        <span class="tooltip-text">The numbers in this Difficulty <br>lie in the range 1 - 50</span>
+                    </a>
+                    <a href="#" class="tooltip-link" id="medium" onclick="setDifficulty('medium')">
+                        Medium
+                        <span class="tooltip-text">The numbers in this Difficulty <br>lie in the range 1 - 100</span>
+                    </a>
+                    <a href="#" class="tooltip-link" id="hard" onclick="setDifficulty('hard')">
+                        Hard
+                        <span class="tooltip-text">The numbers in this Difficulty <br>lie in the range 1 - 500</span>
+                    </a>
+                </div>
+
+                <div class="heading">
+                    <p>Guess The Number</p>
+                </div>
+
+                <div class="range">
+                    <p>Enter a Number</p>
+                    <p class="diff">(1 - 50)</p>
+                </div>
+
+                <div class="lives">
+                    <p class="livrem">Lives Remaining</p>
+                    <p><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i></p>
+                    <p><i id="brokenheart" class="fa-solid fa-heart-crack"></i></p>
+
+                </div>
+
+                <p class="message">...</p>
+
+                <form >
+                    <input type="number" placeholder="Enter a number" class="input_number">
+                    <br>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+
+                <audio id="correct" src="Audios/correct.wav"></audio>
+                <audio id="slightclose" src="Audios/slightly close.wav"></audio>
+                <audio id="veryclose" src="Audios/very close.mp3"></audio>
+                <audio id="wrong" src="Audios/wrong.wav"></audio>
+                <audio id="go" src="Audios/game over.wav"></audio>
+                <audio id="fault" src="Audios/fault.wav"></audio>
+            </div>
+
+            <div class="col3" id="guessHistory">
+                <h1>Guess History:</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
